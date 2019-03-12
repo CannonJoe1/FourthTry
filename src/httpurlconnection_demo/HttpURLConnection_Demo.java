@@ -28,7 +28,7 @@ public class HttpURLConnection_Demo
      */
     public static void main(String[] args) throws IOException 
     {
-        InputStream is = openHttpConnection("https://www.google.com/");
+        InputStream is = openHttpConnection("https://www.orgsports.com/");
         System.out.println(is);
     }
     
