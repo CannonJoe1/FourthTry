@@ -62,7 +62,51 @@ public class UnitTestDemoTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-
+    
+    //assertArrayEquals
+    @Test
+    public void testEqualIntArrays() {
+        int[] odds = new int[] {1,3,5,7};
+        int[] timesTwo = new int[] {2,6,10,14};
+        int[] doubleOdds = UnitTestDemo.doubleIntArray(odds);        
+        assertArrayEquals(timesTwo, doubleOdds);
+    }
+    
+    //assertFalse
+    @Test
+    public void testDifferentFirstAndLastChar() {
+        System.out.println("testDifferentFirstAndLastChar");
+        String testString = "Anastasia";
+        assertFalse(UnitTestDemo.getFirstChar(testString).equals(UnitTestDemo.getLastChar(testString)));
+    }
+    
+    //assertNotNull
+    @Test
+    public void testNotNullArray() {
+        System.out.println("testNotNullArray");
+        int[] odds = new int[] {1,3,5,7};
+        int[] doubleOdds = UnitTestDemo.doubleIntArray(odds);
+        assertNotNull(doubleOdds);
+    }
+    
+    //assertNotSame
+     @Test
+    public void testDifferentObjects() {
+        System.out.println("testDifferentObjects");
+        int[] odds = new int[] {1,3,5,7};
+        int[] doubleOdds = UnitTestDemo.doubleIntArray(odds);
+        assertNotSame(odds, doubleOdds);
+        }
+    
+    //assertEquals(double expected, double actual, double delta) 
+    @Test
+        public void testArrayLengths() {
+        System.out.println("testArrayLengths");
+        int[] odds = new int[] {1,3,5,7};
+        int[] doubleOdds = UnitTestDemo.doubleIntArray(odds);
+        assertEquals(odds.length, doubleOdds.length);
+        }
+    
     /**
      * Test of getFirstChar method, of class UnitTestDemo.
      */

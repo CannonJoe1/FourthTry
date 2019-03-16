@@ -5,6 +5,8 @@
  */
 package unittestdemo;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Cannon
@@ -116,4 +118,19 @@ public class UnitTestDemo
         return numeralCount;
     }
     
+    
+    public static int[] doubleIntArray(int[] odds){
+        int[] localArray = new int[]{};
+        int count=0;
+        
+        for (int i : odds){
+            localArray = Arrays.copyOf (localArray,localArray.length+1);
+            localArray[count] = 2*odds[count];
+            count++;
+        }
+            
+                
+        return localArray;
+    }
+            
 }
