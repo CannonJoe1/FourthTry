@@ -6,6 +6,7 @@ public class HelloWorld {
 		
 		System.out.println("Hello World!");
 		System.out.println("I am pretty fun");
+		System.out.println("No, VERY fun");
 
 		
 		for (int i=0; i < 5; i++) {
